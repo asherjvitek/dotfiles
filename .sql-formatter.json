@@ -1,0 +1,7 @@
+{
+    "language": "tsql",
+    "tabWidth": 4,
+    "keywordCase": "upper",
+    "dataCase": "upper",
+    "functionCase": "upper"
+}
