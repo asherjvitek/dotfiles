@@ -40,3 +40,4 @@ set hlsearch
 nmap <Esc> :nohlsearch<CR>
 
 "test
+"something else
