@@ -17,6 +17,10 @@ nmap <leader>rt :vsc TestExplorer.RunAllTestsInContext<CR>
 nmap <leader>ra :vsc TestExplorer.RunAllTests<CR>
 nmap <leader>rT :vsc TestExplorer.DebugAllTestsInContext<CR>
 nmap <leader>yp :vsc File.CopyFullPath<CR>
+nmap <leader>sf :vsc Edit.GoToFile<CR>
+nmap <leader>sg :vsc Edit.FindinFiles<CR>
+nmap <C-O> :vsc View.NavigateBackward<CR>
+nmap <C-I> :vsc View.NavigateForward<CR>
 
 "remaps
 map <leader>d "_d
