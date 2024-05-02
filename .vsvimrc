@@ -1,26 +1,32 @@
 let mapleader=" "
 
-"LSP Stuff
-"I think that gd already works so it is not mapped here.
 map <leader>. :vsc View.QuickActions<CR>
-nmap gr :vsc Edit.FindAllReferences<CR>
-nmap gI :vsc Edit.GoToImplementation<CR>
-nmap <leader>rn :vsc Refactor.Rename<CR>
-map <leader>rm :vsc Refactor.ExtractMethod<CR>
-nmap <leader>f :vsc Edit.FormatDocument<CR>
-nmap K :vsc Edit.QuickInfo<CR>
-"This is the same as the comment-nvim mappings.
-map gcc :vsc Edit.ToggleLineComment<CR>
-map gbc :vsc Edit.ToggleBlockComment<CR>
 
 nmap <leader>rt :vsc TestExplorer.RunAllTestsInContext<CR>
 nmap <leader>ra :vsc TestExplorer.RunAllTests<CR>
 nmap <leader>rT :vsc TestExplorer.DebugAllTestsInContext<CR>
+
 nmap <leader>yp :vsc File.CopyFullPath<CR>
+
 nmap <leader>sf :vsc Edit.GoToFile<CR>
 nmap <leader>sg :vsc Edit.FindinFiles<CR>
+
+nmap gr :vsc Edit.FindAllReferences<CR>
+nmap gI :vsc Edit.GoToImplementation<CR>
+
+nmap <leader>f :vsc Edit.FormatDocument<CR>
+
+nmap K :vsc Edit.QuickInfo<CR>
+
+"This is the same as the comment-nvim mappings.
+map gcc :vsc Edit.ToggleLineComment<CR>
+map gbc :vsc Edit.ToggleBlockComment<CR>
+
 nmap <C-O> :vsc View.NavigateBackward<CR>
 nmap <C-I> :vsc View.NavigateForward<CR>
+
+nmap <leader>rn :vsc Refactor.Rename<CR>
+map <leader>rm :vsc Refactor.ExtractMethod<CR>
 
 "remaps
 map <leader>d "_d
