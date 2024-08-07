@@ -18,6 +18,9 @@ nmap <leader>f :vsc Edit.FormatDocument<CR>
 
 nmap K :vsc Edit.QuickInfo<CR>
 
+nmap ]d :vsc Edit.GoToNextIssueinFile<CR>
+nmap [d :vsc Edit.GoToPreviousIssueinFile<CR>
+
 "This is the same as the comment-nvim mappings.
 map gcc :vsc Edit.ToggleLineComment<CR>
 map gbc :vsc Edit.ToggleBlockComment<CR>
