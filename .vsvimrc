@@ -22,8 +22,10 @@ nmap ]d :vsc Edit.GoToNextIssueinFile<CR>
 nmap [d :vsc Edit.GoToPreviousIssueinFile<CR>
 
 "This is the same as the comment-nvim mappings.
-map gcc :vsc Edit.ToggleLineComment<CR>
-map gbc :vsc Edit.ToggleBlockComment<CR>
+nmap gcc :vsc Edit.ToggleLineComment<CR>
+nmap gbc :vsc Edit.ToggleBlockComment<CR>
+vmap gc :vsc Edit.ToggleLineComment<CR>
+vmap gb :vsc Edit.ToggleBlockComment<CR>
 
 nmap <C-O> :vsc View.NavigateBackward<CR>
 nmap <C-I> :vsc View.NavigateForward<CR>
