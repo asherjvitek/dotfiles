@@ -9,6 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+#environment stuff here
 exec xinput set-prop 'pointer:Razer Razer DeathAdder V2' 'libinput Accel Speed' -0.5
 exec --no-startup-id xrandr --output DP-4 --primary --mode 2560x1440 --rate 165.08 --output DP-0 --mode 1920x1080 --rate 74.9
 exec ~/.fehbg
