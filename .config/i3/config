@@ -10,11 +10,13 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 #environment stuff here
-exec xinput set-prop 'pointer:Razer Razer DeathAdder V2' 'libinput Accel Speed' -0.5
-exec --no-startup-id xrandr --output DP-4 --primary --mode 2560x1440 --rate 165.08 --output DP-0 --mode 1920x1080 --rate 74.9
-exec ~/.fehbg
+#not sure if the right place but... it works..
+exec --no-startup-id xinput set-prop 'pointer:Razer Razer DeathAdder V2' 'libinput Accel Speed' -0.7
+exec --no-startup-id xrandr --output DP-0 --primary --mode 2560x1440 --rate 165.08 --output DP-4 --mode 1920x1080 --rate 74.9 --right-of DP-0
+exec --no-startup-id bash ~/.fehbg
 
 set $mod Mod4
+
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -130,9 +132,6 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-
-workspace 1 output DP-4
-workspace 10 output DP-1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
