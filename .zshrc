@@ -78,6 +78,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/usr/local/go/bin"
 
 alias csink="bash ~/bin/.local/scripts/pactl-set-sink-fzf"
 
@@ -109,3 +110,6 @@ alias csink="bash ~/bin/.local/scripts/pactl-set-sink-fzf"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+RIPGREP_CONFIG_PATH="~/.ripgreprc"
+
