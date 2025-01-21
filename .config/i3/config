@@ -56,7 +56,8 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+space exec i3-sensible-terminal
+# bindsym $mod+space exec i3-sensible-terminal
+bindsym $mod+space exec ghostty
 
 # kill focused window
 bindsym $mod+Shift+q kill
