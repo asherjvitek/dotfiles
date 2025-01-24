@@ -12,8 +12,10 @@
 #environment stuff here
 #not sure if the right place but... it works..
 exec --no-startup-id xinput set-prop 'pointer:Razer Razer DeathAdder V2' 'libinput Accel Speed' -0.7
-exec --no-startup-id xrandr --output DP-0 --primary --mode 2560x1440 --rate 165.08 --output DP-4 --mode 1920x1080 --rate 74.9 --right-of DP-0
+exec --no-startup-id xrandr --output DP-2 --primary --mode 2560x1440 --rate 165.08 --output DP-4 --mode 1920x1080 --rate 74.9 --right-of DP-2
 exec --no-startup-id bash ~/.fehbg
+#disable the default screen saver and power management
+exec --no-startup-id xset s off -dpms
 
 set $mod Mod4
 
@@ -201,11 +203,11 @@ bar {
         tray_output primary
 }
 
-workspace 1 output DP-0
-workspace 2 output DP-0
-workspace 3 output DP-0
-workspace 4 output DP-0
-workspace 5 output DP-0
+workspace 1 output DP-2
+workspace 2 output DP-2
+workspace 3 output DP-2
+workspace 4 output DP-2
+workspace 5 output DP-2
 
 workspace 6 output DP-4
 workspace 7 output DP-4
