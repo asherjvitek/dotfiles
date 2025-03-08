@@ -79,6 +79,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:/usr/local/go/bin"
+export ODIN_ROOT=~/repo/Odin
 
 alias csink="bash ~/bin/.local/scripts/pactl-set-sink-fzf"
 
@@ -118,3 +119,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 . "/home/asher/.deno/env"
+
