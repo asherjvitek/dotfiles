@@ -6,5 +6,7 @@
 #
 # could be cool!!
 tmux new-window -dn scratch
+    # tmux send-keys -t $selected_name "nvim ." c-M
+    # tmux new-window -dt $selected_name -n "term"
 nvim .
 clear

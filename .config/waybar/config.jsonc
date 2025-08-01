@@ -16,8 +16,28 @@
         "network",
         "pulseaudio",
         "battery",
+        "upower#one",
+        "upower#two",
         "custom/power"
     ],
+    "upower#one": {
+        "model": "Wireless Controller",
+        "icon-size": 20,
+        "hide-if-empty": true,
+        "tooltip": true,
+        "tooltip-spacing": 20,
+        "format": "{percentage} 󰊴",
+        "show-icon": false
+    },
+    "upower#two": {
+        "model": "Glove80",
+        "icon-size": 20,
+        "hide-if-empty": true,
+        "tooltip": true,
+        "tooltip-spacing": 20,
+        "format": "{percentage} 󰌓",
+        "show-icon": false
+    },
     "wlr/taskbar": {
         "format": "{icon}",
         "on-click": "activate",
@@ -93,8 +113,8 @@
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",

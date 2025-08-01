@@ -7,16 +7,16 @@ switch_to() {
     fi
 }
 
-has_session() {
-    tmux list-sessions | grep -q "^$1:"
-}
-
 hydrate() {
     if [ -f $2/.tmux-sessionizer ]; then
         tmux send-keys -t $1 "source $2/.tmux-sessionizer" c-M
     elif [ -f $HOME/.tmux-sessionizer ]; then
         tmux send-keys -t $1 "source $HOME/.tmux-sessionizer" c-M
     fi
+}
+
+has_session() {
+    tmux list-sessions | grep -q "^$1:"
 }
 
 if [[ $# -eq 1 ]]; then
@@ -33,14 +33,18 @@ selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
+    tmux new-session -s $selected_name -c $selected -n "nvim"
     hydrate $selected_name $selected
+    # tmux send-keys -t $selected_name "nvim ." c-M
+    # tmux new-window -dt $selected_name -n "term"
     exit 0
 fi
 
 if ! has_session $selected_name; then
-    tmux new-session -ds $selected_name -c $selected
+    tmux new-session -ds $selected_name -c $selected -n "nvim"
     hydrate $selected_name $selected
+    # tmux send-keys -t $selected_name "nvim ." c-M
+    # tmux new-window -dt $selected_name -n "term"
 fi
 
 switch_to $selected_name

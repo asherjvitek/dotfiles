@@ -2,7 +2,7 @@
   border: none;
   border-radius: 0;
   min-height: 0;
-  font-family: CaskaydiaCove Nerd Font, JetBrainsMono Nerd Font;
+  font-family: CaskaydiaCove Nerd Font, JetBrainsMono Nerd Font, "Font Awesome 7 Free";
   font-size: 13px;
 }
 
@@ -58,6 +58,7 @@ window#waybar.hidden {
 #pulseaudio,
 #network,
 #clock,
+#upower,
 #tray {
   border-radius: 4px;
   margin: 6px 3px;
@@ -84,6 +85,9 @@ window#waybar.hidden {
 }
 
 #battery {
+  background-color: #f38ba8;
+}
+#upower {
   background-color: #f38ba8;
 }
 
