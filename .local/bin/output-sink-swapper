@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+headset="SteelSeries Arctis 7 Game"
+speakers="Starship/Matisse HD Audio Controller Digital Stereo"
+
+if wpctl status | grep -q "^ │  \*.*${speakers}"; then
+    swapTo=$headset
+else
+    swapTo=$speakers
+fi
+
+id=$(wpctl status | grep -E "${swapTo}" | awk '// {
+    # Match the digits directly following "│      " or "│  *   " and before ". "
+    match($0, /[0-9]+\./);
+    # Print the matched digits (excluding the dot)
+    print substr($0, RSTART, RLENGTH - 1);
+    exit # Exit after finding the first match
+}')
+
+wpctl set-default $id
